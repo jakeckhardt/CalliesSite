@@ -21,8 +21,15 @@
     'theme_location' => 'primary'
   );
 
+  $cartargs = array(
+    'theme_location' => 'cart'
+  );
+
   ?>
 
   <?php wp_nav_menu( $args ); ?>
+  </div>
+  <div class="cartMenu">
+    <?php wp_nav_menu( $cartargs ); ?>
   </div>
 </div>
