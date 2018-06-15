@@ -92,11 +92,14 @@ Header Navigation
 
 	#logo {
 		position: absolute;
-		left: 3.5%;
+		width: 100%;
+		top: 15px;
+		display: flex;
+		justify-content: center;
 
 		img {
-			width: 30%;
-			height: auto;
+			width: auto;
+			height: 45px;
 		}
 	}
 
@@ -159,7 +162,7 @@ Header Navigation
 	.cartMenu {
 		position: absolute;
 		top: -5px;
-		right: 35px;
+		right: 0;
 		z-index: 9999;
 
 		.menu-cart-menu-link-container {
@@ -177,9 +180,14 @@ Header Navigation
 						}
 
 						span {
-							color: $grey;
-							font-size: 22px;
-							font-family: $plain;
+							visibility: hidden;
+
+							&:first-letter {
+								visibility: visible;
+								color: $grey;
+								font-size: 22px;
+								font-family: $plain;
+							}
 						}
 
 						&:hover {
@@ -219,11 +227,13 @@ Footer Module
 			display: flex;
 			align-items: center;
 
-			img {
-				width: 50%;
-				height: auto;
-			}
+			aside {
 
+				img {
+					width: auto;
+					height: 65px !important;
+				}
+			}
 		}
 
 		ul {
@@ -622,7 +632,7 @@ Shop page
 	}
 
 	.footerNav {
-		background: $offwhite;
+		background: white;
 		bottom: 0;
 	}
 }
@@ -649,7 +659,7 @@ Single Product page
 				}
 
 				.product {
-					margin-top: 10vh;
+					margin-top: 15vh;
 					width: 70%;
 
 					.woocommerce-product-gallery {
@@ -658,6 +668,22 @@ Single Product page
 
 							div {
 								background: $offwhite;
+
+								.rl-gallery {
+
+									div {
+										padding: 5px;
+
+										a {
+											height:100%;
+											overflow: hidden;
+
+											img {
+												height: 100%;
+											}
+										}
+									}
+								}
 							}
 						}
 					}
@@ -667,7 +693,7 @@ Single Product page
 						h1 {
 							font-family: $fancy;
 							color: $grey;
-							font-size: 85px;
+							font-size: 45px;
 						}
 
 						.price {
@@ -693,6 +719,10 @@ Single Product page
 						}
 
 						.product_meta {
+
+							.sku_wrapper {
+								display: none;
+							}
 
 							span {
 									font-family: $plain;
@@ -769,6 +799,23 @@ Single Product page
 			}
 		}
 	}
+
+	.nivo-lightbox-body-effect-fade {
+
+		.nivo-lightbox-theme-default {
+			background:rgba(73, 73, 73, 0.7);
+
+			.nivo-lightbox-nav {
+				color: white;
+				transition: 0.25s;
+
+				&:hover {
+					color: $offwhite;
+					background-color: rgba(0,0,0,0);
+				}
+			}
+		}
+	}
 }
 
 
@@ -785,6 +832,7 @@ Cart page
 		.content {
 
 			main {
+				min-height: 82vh;
 				padding-top: 15vh;
 				display: flex;
 				justify-content: center;
@@ -1170,6 +1218,8 @@ Order Received page
 		.content {
 
 			main {
+				min-height: 81vh;
+				background-color: $offwhite;
 
 				.woocommerce {
 
@@ -1245,7 +1295,7 @@ Order Received page
 
 /**
 
-Contact Page Styles
+Contact Page
 
 **/
 
@@ -1357,3 +1407,57 @@ Contact Page Styles
 		display: none;
 	}
 }
+
+
+/**
+
+Error Page
+
+**/
+
+.error404 {
+
+	div {
+
+		.content {
+			display: flex;
+			justify-content: center;
+			background-color: $offwhite;
+			height: 100vh;
+			align-items: center;
+
+			main {
+				width: 70%;
+
+				.page-header {
+
+					h1 {
+
+						font-size: 75px;
+						font-family: $fancy;
+						color: $grey;
+						text-align: center;
+					}
+				}
+
+				.alert {
+					background: none;
+					border: none;
+					color: $grey;
+					font-family:$plain;
+					text-align: center;
+					font-size: 18px;
+				}
+
+				form {
+					display: none;
+				}
+			}
+		}
+	}
+}
+
+
+@import "_largeTablets";
+@import "_mediumTablets";
+@import "_phones";

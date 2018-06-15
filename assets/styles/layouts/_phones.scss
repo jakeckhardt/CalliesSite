@@ -1,0 +1,202 @@
+@media screen and (max-width: 479px) {
+
+	/***
+
+	Header Styles
+
+	***/
+
+	.header {
+
+		#burger {
+			width: 35px;
+			left: 10px;
+
+			span {
+				width: 35px;
+			}
+		}
+
+		#logo {
+
+			img {
+				height: 35px;
+			}
+		}
+
+		.nav {
+
+			ul {
+
+				li {
+
+					a {
+						font-size: 50px;
+					}
+				}
+			}
+		}
+
+		.cartMenu {
+			right: -30px;
+		}
+	 }
+
+
+	/***
+
+	Footer Styles
+
+	***/
+
+	.footerNav {
+
+		#footerItems {
+			flex-direction: column;
+			padding-left: calc(10vw + 22px);
+			width: 80vw;
+
+			#footer-logo {
+				margin-bottom: 10px;
+			}
+
+			ul {
+				padding: 10px 0;
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+			}
+
+			aside:nth-of-type(2) {
+				display: none;
+			}
+		}
+	}
+
+
+	/***
+
+	Shop page
+
+	***/
+
+	.woocommerce {
+
+	  .page-title {
+	 	 font-size: 65px;
+	 	 padding-left: calc(10vw + 15px);
+	  }
+
+	  .woocommerce-result-count {
+		 padding-left: calc(10vw + 15px);
+	  }
+
+	  .woocommerce-ordering {
+	 	 width: 100vw;
+	 	 display: flex;
+	 	 justify-content: center;
+
+	 	 .orderby {
+	 		 width: 72vw;
+	 		 margin: 0;
+	 	 }
+	  }
+
+	  div {
+
+	 	 .content{
+
+	 		 main {
+
+	 			 .products {
+
+	 				 .product {
+	 					 width: calc(100% / 2 - 30px);
+	 					 margin:15px;
+						 clear: both;
+
+						 &:nth-of-type(4n) {
+							 float: left;
+							 clear: none !important;
+						 }
+
+	 					 h2 {
+								font-size: 16px;
+	 					 }
+
+	 					 .price {
+
+								span {
+									font-size: 12px;
+								}
+	 						}
+	 					 }
+	 				 }
+	 			 }
+	 	 	}
+	  }
+	}
+
+
+	/**
+
+	Order Received page
+
+	**/
+
+	.woocommerce-order-received {
+
+		div {
+
+			.content {
+
+				main {
+
+					.woocommerce {
+
+						.woocommerce-order {
+
+							.woocommerce-order-overview {
+								display: flex;
+								flex-direction: column;
+
+								li {
+									padding: 9px 0;
+									border: none;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	/***
+
+	Contact styles
+
+	***/
+
+	.contact {
+
+		#contact {
+			align-items: center;
+
+			 #contactInfo {
+			 width: 75vw;
+
+				 p {
+					 font-size: 16px;
+				 }
+			 }
+
+			 #contactForm {
+
+				 div {
+					 width: 75vw;
+				 }
+			 }
+		}
+	}
+}

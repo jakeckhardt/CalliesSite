@@ -1,0 +1,160 @@
+@media screen and (max-width: 1024px) {
+  /* start of large tablet styles */
+
+	/***
+
+	Shop tablet
+
+	***/
+
+	.woocommerce {
+
+		.page-title {
+			padding-top: 10vh;
+		}
+
+		.orderby {
+			margin-right: calc(10vw + 25px);
+		}
+
+		div {
+
+			.content{
+
+				main {
+
+					.products {
+
+						.product {
+
+							h2 {
+								 padding: 5px 5px 0 5px;
+								 left:0;
+								 background: white;
+								 position: relative;
+								 font-size: 24px;
+								 bottom:0;
+							}
+
+							.price {
+								 position: relative;
+								 bottom: 0;
+								 margin:0;
+								 padding: 0 5px;
+								 left:0;
+								 background: white;
+							 }
+
+							 &:hover {
+
+								 img {
+									 opacity: 1;
+									 transform: scale(1);
+								 }
+
+								 h2 {
+					 				 bottom: 0;
+						 			}
+
+									.price {
+						 			 bottom: 0;
+						 			}
+							 }
+
+							}
+						}
+					}
+			}
+		}
+	}
+
+	/***
+
+	Cart tablet
+
+	***/
+
+	.woocommerce-cart {
+
+		div {
+
+			.content {
+				min-height: 84vh;
+				background-color: $offwhite;
+
+				main {
+					padding-top: 10vh;
+				}
+			}
+		}
+	}
+
+
+	/***
+
+	Checkout Tablet
+
+	***/
+
+	.woocommerce-checkout {
+
+		div {
+
+			.content {
+
+				main {
+
+					.woocommerce {
+						padding-top: 10vh;
+					}
+				}
+			}
+		}
+	}
+
+	/**
+
+	Order Received page
+
+	**/
+
+	.woocommerce-order-received {
+
+		div {
+
+			.content {
+
+				main {
+					min-height: 84vh;
+				}
+			}
+		}
+	}
+
+
+	/***
+
+	Contact Tablet
+
+	***/
+
+	.contact {
+
+		#contact {
+			flex-direction: column;
+
+			#contactInfo {
+				width:100vw;
+				padding: 20px;
+
+				p {
+					text-align: center;
+				}
+			}
+
+			#contactForm {
+				width: 100vw;
+			}
+		}
+	}
+}

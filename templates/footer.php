@@ -10,7 +10,7 @@
       ?>
 
     </div>
-    
+
   <?php
 
   $args = array(
@@ -35,5 +35,5 @@
 
   </div>
 
-  <p>©2018 Callie's Website</p>
+  <p>©2018 Maeby</p>
 </footer>

@@ -1,0 +1,319 @@
+@media screen and (max-width: 768px) {
+
+	/***
+
+	Shop page
+
+	***/
+
+	.woocommerce {
+
+		.page-title {
+			font-size: 75px;
+		}
+
+		div {
+
+			.content{
+
+				main {
+
+					.products {
+						position: relative;
+
+						.product {
+							width: calc(100% / 3 - 50px);
+							clear: none;
+
+							&:nth-of-type(4n) {
+								float: left;
+								clear: both !important;
+							}
+
+							h2 {
+								 padding: 5px 5px 0 5px;
+								 left:0;
+								 background: white;
+								 position: relative;
+								 bottom:0;
+								 font-size: 18px;
+							}
+
+							.price {
+								 position: relative;
+								 bottom: 0;
+								 margin:0;
+								 padding: 0 5px;
+								 left:0;
+								 background: white;
+
+								 span {
+									 font-size: 16px;
+								 }
+							 }
+
+							 &:hover {
+
+								 img {
+									 opacity: 1;
+									 transform: scale(1);
+								 }
+
+								 h2 {
+					 				 bottom: 0;
+						 			}
+
+									.price {
+						 			 bottom: 0;
+						 			}
+							 }
+							}
+						}
+					}
+			}
+		}
+		}
+
+
+	/**
+
+	Single Product page
+
+	**/
+
+	.single-product {
+
+		div {
+
+			.content {
+
+				main {
+
+					.product {
+						margin-top: 15vh;
+						width: 70%;
+
+						.woocommerce-product-gallery {
+							width: 50%;
+							float: left;
+
+							.woocommerce-product-gallery__wrapper {
+
+								div {
+									background: $offwhite;
+
+									.rl-gallery {
+
+										div {
+											padding: 5px;
+
+											a {
+												height:100%;
+												overflow: hidden;
+
+												img {
+													height: 100%;
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+
+						.entry-summary {
+							width: calc(50% - 15px);
+							float: left;
+							padding-left: 15px;
+
+							h1 {
+								font-size: 55px;
+							}
+
+							.price {
+								font-family: $plain;
+								color: $grey;
+							}
+
+							.woocommerce-product-details__short-description {
+
+								p {
+									font-family: $plain;
+									color: $grey;
+								}
+							}
+
+							form {
+
+								button {
+									font-family: $plain;
+									background: $grey;
+									padding: 7px;
+								}
+							}
+
+							.product_meta {
+
+								.sku_wrapper {
+									display: none;
+								}
+
+								span {
+										font-family: $plain;
+										color: $grey;
+
+										a {
+											font-family: $plain;
+											color: $grey;
+
+											&:hover {
+												text-decoration: none;
+											}
+										}
+								}
+							}
+						}
+
+						.woocommerce-tabs {
+							margin-bottom: 25px;
+
+							ul {
+								display: none;
+							}
+
+							.woocommerce-Tabs-panel--description {
+								margin-bottom: 0;
+
+								h2 {
+									font-family: $fancy;
+									color: $grey;
+								}
+
+								p {
+									padding: 0 10px 10px 10px;
+									background: $offwhite;
+									font-family: $plain;
+									color: $grey;
+									margin-bottom: 0;
+
+									&:first-of-type {
+										padding: 10px;
+									}
+								}
+							}
+						}
+
+						.related {
+							width: 100%;
+							margin-left:0;
+
+							h2 {
+								font-family: $fancy;
+								color: $grey;
+							}
+
+							ul {
+								margin-left:0;
+								width: 100%;
+								display: flex;
+								justify-content: space-around;
+
+								li {
+									width: calc(100% / 3 - 20px);
+									margin: 10px;
+									position: relative;
+
+									h2 {
+
+										font-size: 20px;
+										bottom: 0;
+									}
+
+									.price {
+
+										span {
+											font-size:16px;
+											bottom:0;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.nivo-lightbox-body-effect-fade {
+
+			.nivo-lightbox-theme-default {
+				background:rgba(73, 73, 73, 0.7);
+
+				.nivo-lightbox-nav {
+					color: white;
+					transition: 0.25s;
+
+					&:hover {
+						color: $offwhite;
+						background-color: rgba(0,0,0,0);
+					}
+				}
+			}
+		}
+	}
+
+
+	/***
+
+	Cart tablet
+
+	***/
+
+	.woocommerce-cart {
+
+		div {
+
+			.content {
+				min-height: 81vh;
+				background-color: $offwhite;
+			}
+		}
+	}
+
+
+	/**
+
+	Order Received page
+
+	**/
+
+	.woocommerce-order-received {
+
+		div {
+
+			.content {
+				min-height: 82vh;
+			}
+		}
+	}
+
+
+	 /***
+
+	 Contact styles
+
+	 ***/
+
+	.contact {
+
+ 		#contact {
+
+ 			#contactForm {
+
+ 				div {
+ 					width: 70%;
+ 				}
+ 			}
+ 		}
+ 	}
+}
