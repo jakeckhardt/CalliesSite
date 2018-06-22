@@ -4,7 +4,7 @@
 		<?php while( have_rows('hero_images') ): the_row(); ?>
 
         <div
-				style="background: url('<?php the_sub_field('hero_image'); ?>') center/cover"
+				style="background: linear-gradient( rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)),url('<?php the_sub_field('hero_image'); ?>') center/cover"
 				>
 				</div>
 

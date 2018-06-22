@@ -28,17 +28,4 @@
 
 <?php endif; ?>
 
-<?php if( have_rows('images') ): ?>
-
-    <div class="textImage">
-
-    <?php while( have_rows('images') ): the_row(); ?>
-
-					<img src="<?php the_sub_field('image'); ?>" />
-
-    <?php endwhile; ?>
-    </div>
-
-<?php endif; ?>
-
 </div>

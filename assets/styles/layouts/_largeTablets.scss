@@ -1,6 +1,193 @@
 @media screen and (max-width: 1024px) {
   /* start of large tablet styles */
 
+	/**
+
+	Header Navigation
+
+	**/
+
+	.header {
+
+		#burger {
+			top: 35px;
+		}
+
+		#logo {
+			top: 25px;
+		}
+
+		.cartMenu {
+			top: 5px;
+		}
+
+		.hidden {
+			width: 0;
+		}
+	}
+
+	/**
+
+	Home Page Styles
+
+	**/
+	.home {
+
+		/**
+
+		Hero Module
+
+		**/
+
+		.hero {
+
+			.hero-img {
+				position: relative;
+				height: 80vh;
+				width: calc(100vw - 40px);
+				margin-left: 20px;
+				margin-right: 20px;
+			}
+
+			#hero-texts {
+				justify-content: center;
+				bottom: 0;
+
+				.headerText {
+					padding: 0 10px;
+				}
+			}
+		}
+
+		/**
+
+		Featured Photos Module
+
+		**/
+
+		#featuredPhotos {
+			overflow: hidden;
+
+			h2 {
+				font-size: 75px;
+				margin: 25px 0;
+				width: 100vw;
+				padding: 0;
+				text-align: center;
+			}
+
+			#prev, #next {
+				display:block;
+				position: absolute;
+				font-family: $plain;
+				font-size: 150px;
+				z-index: 11;
+				color: $grey;
+				top: calc(50% - 150px);
+			}
+
+			#prev {
+				left: 0;
+				padding-left: 20px;
+			}
+
+			#next {
+				right: 0;
+				padding-right: 20px;
+			}
+
+			#items {
+				position:relative;
+				width: 300%;
+				overflow: hidden;
+
+				.featuredPhoto {
+					width: 100%;
+					border: white solid 10px;
+
+					.itemInfo {
+						height: 100%;
+						width: 50vw;
+						display: flex;
+						flex-direction: column;
+						align-items: flex-end;
+						justify-content: flex-end;
+						left: 0;
+						bottom: 0;
+						margin-left: 50vw;
+						padding-right: 10%;
+						padding-bottom: 25px;
+
+						h3 {
+							text-align: right;
+							font-size: 65px;
+						}
+
+						p {
+							font-size: 42px;
+							margin: 0;
+						}
+
+						&:hover {
+							bottom: 0;
+						}
+					}
+
+					img {
+						position: relative;
+						margin-top: 100px;
+						width: 75%;
+						height: auto;
+						bottom: 0;
+						left:-10%;
+					}
+
+					&:hover {
+
+						.itemInfo {
+							bottom: 0px;
+						}
+
+						img {
+							transform: scale(1);
+							opacity: 1;
+						}
+					}
+				}
+			}
+		}
+
+
+		/**
+
+		Text Module
+
+		**/
+
+		.textWrapper {
+			width: calc(100% - 200px);
+			height: 75vh;
+			margin: 12.5vh 100px;
+
+			.singleText {
+				width: 60%;
+			}
+
+			p {
+				color: $grey;
+				font-size: 18px;
+				font-family: $plain;
+				line-height: 35px;
+
+				&::first-letter {
+					font-family: $fancy;
+					font-size: 45px;
+				}
+			}
+		}
+	}
+
+
 	/***
 
 	Shop tablet
@@ -114,7 +301,7 @@
 
 	/**
 
-	Order Received page
+	Order Received Tablet
 
 	**/
 

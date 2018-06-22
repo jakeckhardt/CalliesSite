@@ -1,6 +1,8 @@
 <div id="featuredPhotos">
 <?php if( have_rows('featured_items') ): ?>
   <h2>Featured Products</h2>
+  <a id="prev">&#8249;</a>
+  <a id="next">&#8250;</a>
   <div id="items">
     <?php while( have_rows('featured_items') ): the_row(); ?>
 

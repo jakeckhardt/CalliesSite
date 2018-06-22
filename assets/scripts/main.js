@@ -80,9 +80,6 @@ jQuery(document).ready(function(){
 
   var burger = jQuery("#burger");
   var nav = jQuery(".nav");
-  var firstTextImage = jQuery(".textImage img:nth-of-type(1)");
-  var secondTextImage = jQuery(".textImage img:nth-of-type(2)");
-  var thirdTextImage = jQuery(".textImage img:nth-of-type(3)");
   var textContainerDiv = jQuery("#hero-texts");
   var textContainerText = jQuery("#hero-texts p").text();
   var submitButton = jQuery(".wpcf7-submit");
@@ -140,30 +137,45 @@ Homepage carousel
     autoplay: true,
     autoplaySpeed:4000,
     arrows: false,
-    dots: true,
+    dots: false,
     pauseOnHover: false,
   });
 
-/***
+  if (screen.width <= 1024) {
+    var featCounter = 0;
 
-Parallax items
+    jQuery('#next').click( function(){
+      if (featCounter !== 2) {
+        jQuery('#items').animate({
+          right: '+=100%'
+        }, function(){
+          featCounter += 1;
+        });
+      } else {
+        jQuery('#items').animate({
+          right: '-=200%'
+        }, function(){
+          featCounter = 0;
+        });
+      }
+    });
 
-**/
-
-  var firstTextImageTop = parseInt(firstTextImage.css('top'));
-  var secondTextImageTop = parseInt(secondTextImage.css('top'));
-  var thirdTextImageTop = parseInt(thirdTextImage.css('top'));
-
-	function parallaxScroll(){
-		var scrolled = jQuery(window).scrollTop();
-		firstTextImage.css('top',(firstTextImageTop+(scrolled*0.075))+'px');
-    secondTextImage.css('top',(secondTextImageTop+(scrolled*0.05))+'px');
-    thirdTextImage.css('top',(thirdTextImageTop+(scrolled*0.05))+'px');
+    jQuery('#prev').click( function(){
+      if (featCounter !== 0) {
+        jQuery('#items').animate({
+          right: '-=100%'
+        }, function(){
+          featCounter -= 1;
+        });
+      } else {
+        jQuery('#items').animate({
+          right: '+=200%'
+        }, function(){
+          featCounter = 2;
+        });
+      }
+    });
   }
-
-  jQuery(window).scroll(function(e){
-  	parallaxScroll();
-	});
 
 
 /***

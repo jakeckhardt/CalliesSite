@@ -1,5 +1,110 @@
 @media screen and (max-width: 768px) {
 
+	/**
+
+	Home Page Styles
+
+	**/
+
+	.home {
+
+		/**
+
+		Hero Module
+
+		**/
+
+		.hero {
+
+			#hero-texts {
+				position: absolute;
+				display: flex;
+				flex-direction: column;
+				left: 10vw;
+				line-height: 120px;
+
+				.headerText {
+					position: relative;
+					width: max-content;
+
+					p {
+						display: inline-block;
+						position: relative;
+						z-index: 15;
+						font-family: $fancy;
+						font-size: 125px;
+						color: $grey;
+						margin: 0;
+						user-select: none;
+					}
+
+					.textUnderline {
+						width:100%;
+						position: absolute;
+						background: $lightgrey;
+						height: 20px;
+					}
+				}
+			}
+		}
+
+		/**
+
+		Featured Photos Module
+
+		**/
+
+		#featuredPhotos {
+
+			h2 {
+				font-size: 55px;
+			}
+
+			#items {
+
+				.featuredPhoto {
+
+					.itemInfo {
+
+						h3 {
+							font-size: 50px;
+						}
+
+						p {
+							font-size: 32px;
+						}
+					}
+				}
+			}
+		}
+
+
+		/**
+
+		Text Module
+
+		**/
+
+		.textWrapper {
+			width: calc(100% - 100px);
+			height: 85vh;
+			margin: 7.5vh 50px;
+
+			.singleText {
+				width: 75%;
+			}
+
+			p {
+				font-size: 16px;
+
+				&::first-letter {
+					font-size: 35px;
+				}
+			}
+		}
+	}
+
+
 	/***
 
 	Shop page

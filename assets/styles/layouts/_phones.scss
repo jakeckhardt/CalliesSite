@@ -1,5 +1,6 @@
 @media screen and (max-width: 479px) {
 
+
 	/***
 
 	Header Styles
@@ -10,14 +11,17 @@
 
 		#burger {
 			width: 35px;
-			left: 10px;
+			left: 15px;
+			top: 15px;
 
 			span {
+				height: 3px;
 				width: 35px;
 			}
 		}
 
 		#logo {
+			top: 10px;
 
 			img {
 				height: 35px;
@@ -38,6 +42,7 @@
 		}
 
 		.cartMenu {
+			top: -7px;
 			right: -30px;
 		}
 	 }
@@ -58,6 +63,15 @@
 
 			#footer-logo {
 				margin-bottom: 10px;
+				display: flex;
+				justify-content: center;
+
+				aside {
+
+					img {
+						height: 45px !important;
+					}
+				}
 			}
 
 			ul {
@@ -65,10 +79,114 @@
 				display: flex;
 				flex-direction: row;
 				justify-content: space-between;
+
+				li {
+
+					a {
+						font-size: 12px;
+					}
+				}
 			}
 
 			aside:nth-of-type(2) {
 				display: none;
+			}
+		}
+	}
+
+
+	/***
+
+	Home Page Phone
+
+	***/
+
+	.home {
+
+		/**
+
+		Hero Module
+
+		**/
+
+		.hero {
+
+			#hero-texts {
+				line-height: 80px;
+				bottom: 0;
+
+				.headerText {
+
+					p {
+						font-size: 80px;
+					}
+
+					.textUnderline {
+						width:90%;
+						height: 15px;
+					}
+				}
+			}
+		}
+
+		/**
+
+		Featured Photos Module
+
+		**/
+
+		#featuredPhotos {
+
+			h2 {
+				font-size: 35px;
+			}
+
+			#prev, #next {
+				top: calc(50% - 80px);
+				font-size: 80px;
+			}
+
+			#items {
+
+				.featuredPhoto {
+
+					.itemInfo {
+
+						h3 {
+							font-size: 30px;
+						}
+
+						p {
+							font-size: 16px;
+						}
+					}
+
+					img {
+						margin-top: 50px;
+					}
+				}
+			}
+		}
+
+
+		/**
+
+		Text Module
+
+		**/
+
+		.textWrapper {
+			width: calc(100% - 50px);
+			height: 90vh;
+			margin: 5vh 25px;
+
+			p {
+				font-size: 12px;
+				line-height: 30px;
+
+				&::first-letter {
+					font-size: 30px;
+				}
 			}
 		}
 	}
