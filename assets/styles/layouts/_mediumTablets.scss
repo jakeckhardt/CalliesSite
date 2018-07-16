@@ -193,6 +193,9 @@
 			.content {
 
 				main {
+					.product {
+						margin-top: 15vh;
+					}
 
 					.images {
 						background-color: $offwhite;
@@ -233,21 +236,6 @@
 							.price {
 								font-family: $plain;
 								color: $grey;
-							}
-
-							form {
-
-								.woocommerce-variation-add-to-cart {
-									width: 100%;
-									display: flex;
-
-									button {
-										flex-grow: 1;
-										font-family: $plain;
-										background: $grey;
-										padding: 7px;
-									}
-								}
 							}
 						}
 
