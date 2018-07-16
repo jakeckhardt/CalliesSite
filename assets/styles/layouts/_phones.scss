@@ -111,6 +111,12 @@
 
 		.hero {
 
+			.hero-img {
+				width: calc(100vw - 20px);
+				margin-left: 10px;
+				margin-right: 10px;
+			}
+
 			#hero-texts {
 				line-height: 80px;
 				bottom: 0;
@@ -254,6 +260,152 @@
 	 	 	}
 	  }
 	}
+
+
+
+	/**
+
+	Single Product page
+
+	**/
+
+	.single-product {
+
+		div {
+
+			.content {
+
+				main {
+
+					.product {
+						margin-top: 15vh;
+						width: 70%;
+
+						.images {
+							background-color: $offwhite;
+
+							.slider {
+
+								.slick-prev, .slick-next {
+									display: block !important;
+
+									&:before {
+										font-size: 20px;
+									}
+								}
+							}
+
+							#wpis-gallery {
+
+								.slick-track {
+
+									li {
+										padding: 5px 2.5px;
+									}
+								}
+							}
+						}
+
+						.entry-summary {
+
+							h1 {
+								font-size: 35px;
+							}
+
+							.price {
+								font-size: 16px;
+							}
+
+							.woocommerce-product-details__short-description {
+
+								p {
+									font-size: 16px;
+								}
+							}
+
+							.product_meta {
+
+								.sku_wrapper {
+									display: none;
+								}
+
+								span {
+										font-family: $plain;
+										color: $grey;
+
+										a {
+											font-family: $plain;
+											color: $grey;
+
+											&:hover {
+												text-decoration: none;
+											}
+										}
+								}
+							}
+						}
+
+						.woocommerce-tabs {
+
+							.woocommerce-Tabs-panel--description {
+
+								h2 {
+									font-size: 30px;
+								}
+
+								p {
+									font-size: 14px;
+								}
+							}
+						}
+
+						.related {
+							width: 100%;
+
+							h2 {
+								font-size: 30px;
+							}
+
+							ul {
+								position: relative;
+								margin-left:0;
+								display: flex;
+								justify-content: space-around;
+
+								li {
+									width: 100%;
+									margin: 0px;
+									position: relative;
+
+									h2 {
+
+										font-size: 20px;
+										bottom: 0;
+									}
+
+									.price {
+
+										span {
+											font-size:16px;
+											bottom:0;
+										}
+									}
+								}
+							}
+						}
+
+						.relatedArrows {
+
+							.relatedPrev:before, .relatedNext:after {
+								font-size: 20px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
 
 
 	/**

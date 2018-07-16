@@ -6,7 +6,7 @@ $fancy: 'Abhaya Libre', serif;
 $plain: 'Open Sans', sans-serif;
 $salmon: #FFA69E;
 $offwhite: #F6F4F3;
-$grey: #494949;
+$grey: #242021;
 $lightgrey: #e2e2e2;
 
 body {
@@ -99,7 +99,7 @@ Header Navigation
 
 		img {
 			width: auto;
-			height: 45px;
+			height: 75px;
 		}
 	}
 
@@ -356,9 +356,9 @@ Home Page Styles
 			position: absolute;
 			width: 100%;
 			color: $grey;
-			font-size: 85px;
+			font-size: 65px;
 			margin: 25px 0;
-			padding: 0 4.2%;
+			padding: 0 7%;
 			font-family: $fancy;
 			z-index: 10;
 			user-select: none;
@@ -372,11 +372,11 @@ Home Page Styles
 			margin: 0;
 			display: flex;
 			width: 100%;
-			justify-content: space-around;
+			justify-content: space-between;
 			background: $offwhite;
 
 			.featuredPhoto {
-				width: calc(100% / 3);
+				width: 100%;
 				position: relative;
 				overflow:hidden;
 
@@ -675,33 +675,63 @@ Single Product page
 					margin-top: 15vh;
 					width: 70%;
 
-					.woocommerce-product-gallery {
+					.images {
+						background-color: $offwhite;
 
-						.woocommerce-product-gallery__wrapper {
+						.slider {
 
-							div {
-								background: $offwhite;
+							.slick-prev {
 
-								.rl-gallery {
+								&:before {
+									content: "\f053";
+									font-family: FontAwesome;
+									color: $grey;
+									font-size: 30px;
+									left: -30px;
+								}
 
-									div {
-										padding: 5px;
+								&:hover {
+									width: 20px;
+									height: 20px;
+								}
+							}
 
-										a {
-											height:100%;
-											overflow: hidden;
+							.slick-next {
 
-											img {
-												height: 100%;
-											}
-										}
-									}
+								 &:before {
+									 	content: "\f054";
+										font-family: FontAwesome;
+										color: $grey;
+										font-size: 30px;
+								 }
+
+								 &:hover {
+									 width: 20px;
+									 height: 20px;
+								 }
+							}
+
+							.zoom {
+
+								&:focus {
+									outline: none;
+								}
+							}
+						}
+
+						#wpis-gallery {
+
+							.slick-track {
+
+								li {
+									padding: 5px 2.5px;
 								}
 							}
 						}
 					}
 
 					.entry-summary {
+						padding-left: 40px;
 
 						h1 {
 							font-family: $fancy;
@@ -785,6 +815,7 @@ Single Product page
 					.related {
 						width: 100%;
 						margin-left:0;
+						overflow:hidden;
 
 						h2 {
 							font-family: $fancy;
@@ -792,8 +823,9 @@ Single Product page
 						}
 
 						ul {
+							position: relative;
 							margin-left:0;
-							width: 100%;
+							display: flex;
 
 							li {
 								width: calc(100% / 3 - 34px);
@@ -808,29 +840,42 @@ Single Product page
 							}
 						}
 					}
-				}
-			}
-		}
-	}
 
-	.nivo-lightbox-body-effect-fade {
+					.relatedArrows {
+						position: absolute;
+						width: 100%;
+						display: flex;
+						justify-content: space-between;
 
-		.nivo-lightbox-theme-default {
-			background:rgba(73, 73, 73, 0.7);
+						.relatedPrev:before, .relatedNext:after {
+							position: relative;
+							font-family: FontAwesome;
+							color: #grey;
+							font-size: 30px;
+						}
 
-			.nivo-lightbox-nav {
-				color: white;
-				transition: 0.25s;
+						.relatedPrev:before {
+							content: "\f053";
+							left: -25px;
+						}
 
-				&:hover {
-					color: $offwhite;
-					background-color: rgba(0,0,0,0);
+						.relatedNext:after {
+							content: "\f054";
+							right: -25px;
+						}
+
+						.relatedNext, .relatedPrev {
+
+							&:hover {
+								cursor: pointer;
+							}
+						}
+					}
 				}
 			}
 		}
 	}
 }
-
 
 /**
 

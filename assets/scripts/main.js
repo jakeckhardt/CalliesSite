@@ -141,43 +141,175 @@ Homepage carousel
     pauseOnHover: false,
   });
 
-  if (screen.width <= 1024) {
-    var featCounter = 0;
 
-    jQuery('#next').click( function(){
-      if (featCounter !== 2) {
-        jQuery('#items').animate({
-          right: '+=100%'
-        }, function(){
-          featCounter += 1;
-        });
-      } else {
-        jQuery('#items').animate({
-          right: '-=200%'
-        }, function(){
-          featCounter = 0;
-        });
-      }
+/***
+
+Featured Photos carousel
+
+***/
+
+function featureNext(counter) {
+  if (counter!== 2) {
+    jQuery('#items').animate({
+      right: '+=100%'
     });
-
-    jQuery('#prev').click( function(){
-      if (featCounter !== 0) {
-        jQuery('#items').animate({
-          right: '-=100%'
-        }, function(){
-          featCounter -= 1;
-        });
-      } else {
-        jQuery('#items').animate({
-          right: '+=200%'
-        }, function(){
-          featCounter = 2;
-        });
-      }
+  } else {
+    jQuery('#items').animate({
+      right: '-=200%'
     });
   }
+}
+
+function featurePrev(counter) {
+  if (counter !== 0) {
+    jQuery('#items').animate({
+      right: '-=100%'
+    });
+  } else {
+    jQuery('#items').animate({
+      right: '+=200%'
+    });
+  }
+}
 
 
+if (screen.width <= 1024) {
+  var featCounter = 0;
+
+  jQuery('#next').click( function(){
+    featureNext(featCounter);
+    featCounter += 1;
+    if (featCounter === 3) {
+      featCounter = 0;
+    }
+    console.log("how");
+  });
+
+  jQuery('#prev').click( function(){
+    featurePrev(featCounter);
+    if (featCounter === 0) {
+      featCounter = 3;
+    }
+    featCounter -= 1;
+  });
+} else {
+
+  jQuery( window ).resize(function() {
+
+    if (screen.width <= 1024) {
+      var featCounter = 0;
+
+      jQuery('#next').click( function(){
+        featureNext(featCounter);
+        featCounter += 1;
+        if (featCounter === 3) {
+          featCounter = 0;
+        }
+        console.log("what");
+      });
+
+      jQuery('#prev').click( function(){
+        featurePrev(featCounter);
+        if (featCounter === 0) {
+          featCounter = 3;
+        }
+        featCounter -= 1;
+      });
+    }
+  });
+}
+
+
+
+/***
+
+Single Product Related Product Carousel
+
+***/
+var singlePage = jQuery(".product").first();
+var relatedCounter = 0;
+var relatedItems = jQuery(".related .products li");
+var itemCount = relatedItems.length;
+var relatedWrap = jQuery(".related .products");
+var productPhotos = jQuery(".slick-track li");
+var productGallery = jQuery("#wpis-gallery");
+
+singlePage.append("<div class='relatedArrows'><div class='relatedPrev'></div><div class='relatedNext'></div></div>");
+
+function relatedItemsNext(itemWidth, itemsShown) {
+  if (relatedCounter !== itemCount - itemsShown) {
+    jQuery('.related .products').animate({
+      right: '+=' + itemWidth + '%'
+    }, function(){
+      relatedCounter += 1;
+    });
+  } else {
+    jQuery('.related .products').animate({
+      right: '-=' + (itemCount - itemsShown) * itemWidth + "%"
+    }, function(){
+      relatedCounter = 0;
+    });
+  }
+}
+
+function relatedItemsPrev(itemWidth, itemsShown) {
+  if (relatedCounter !== 0) {
+    jQuery('.related .products').animate({
+      right: '-=' + itemWidth + '%'
+    }, function(){
+      relatedCounter -= 1;
+    });
+  } else {
+    jQuery('.related .products').animate({
+      right: '+=' + (itemCount - itemsShown) * itemWidth + "%"
+    }, function(){
+      relatedCounter = itemCount - itemsShown;
+    });
+  }
+}
+
+jQuery( window ).on("load resize", function(){
+  if (screen.width >= 479) {
+    if (itemCount < 3 ) {
+      jQuery(".relatedArrows").css("display", "none");
+    } else {
+      jQuery(".relatedArrows").css("display", "flex");
+    }
+    relatedWrap.css("width", 100 / 3 * itemCount + "%");
+    relatedWrap.css("right", "0");
+    relatedCounter = 0;
+  } else if ( screen.width <= 479 ) {
+    if (itemCount <= 1 ) {
+      jQuery(".relatedArrows").css("display", "none");
+    } else {
+      jQuery(".relatedArrows").css("display", "flex");
+    }
+    relatedWrap.css("width", itemCount * 100 + "%");
+    relatedWrap.css("right", "0");
+    relatedCounter = 0;
+  }
+  jQuery(".relatedArrows").css("bottom", jQuery(".related").height() / 2 + "px");
+});
+
+jQuery('.relatedNext').click( function() {
+  if (screen.width >= 479) {
+    relatedItemsNext(100 / 3, 3);
+  } else {
+    relatedItemsNext(100, 1);
+  }
+});
+
+jQuery('.relatedPrev').click( function() {
+  if (screen.width >= 479) {
+    relatedItemsPrev(100 / 3, 3);
+  } else {
+    relatedItemsPrev(100, 1);
+  }
+});
+
+if (productPhotos.length === 1) {
+  productGallery.css("display", "none");
+}
 /***
 
 Custom form validation

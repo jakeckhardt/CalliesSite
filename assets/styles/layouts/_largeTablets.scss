@@ -70,7 +70,6 @@
 
 			h2 {
 				font-size: 75px;
-				margin: 25px 0;
 				width: 100vw;
 				padding: 0;
 				text-align: center;
@@ -254,6 +253,155 @@
 			}
 		}
 	}
+
+
+
+	/**
+
+	Single Product page
+
+	**/
+
+	.single-product {
+
+		div {
+
+			.content {
+
+				main {
+
+					.product {
+						margin-top: 15vh;
+						width: 70%;
+
+						.images {
+							background-color: $offwhite;
+
+							.slider {
+
+								.slick-prev, .slick-next {
+									display: block !important;
+								}
+							}
+
+							#wpis-gallery {
+
+								.slick-track {
+
+									li {
+										padding: 5px 2.5px;
+									}
+								}
+							}
+						}
+
+						.entry-summary {
+
+							h1 {
+								font-size: 35px;
+							}
+
+							.price {
+								font-size: 16px;
+							}
+
+							.woocommerce-product-details__short-description {
+
+								p {
+									font-size: 16px;
+								}
+							}
+
+							form {
+
+								.woocommerce-variation-add-to-cart {
+									width: 100%;
+									display: flex;
+
+									button {
+										width: 60%;
+										font-family: $plain;
+										background: $grey;
+										padding: 7px;
+									}
+								}
+							}
+
+							.product_meta {
+
+								.sku_wrapper {
+									display: none;
+								}
+
+								span {
+										font-family: $plain;
+										color: $grey;
+
+										a {
+											font-family: $plain;
+											color: $grey;
+
+											&:hover {
+												text-decoration: none;
+											}
+										}
+								}
+							}
+						}
+
+						.woocommerce-tabs {
+
+							.woocommerce-Tabs-panel--description {
+
+								h2 {
+									font-size: 30px;
+								}
+
+								p {
+									font-size: 14px;
+								}
+							}
+						}
+
+						.related {
+
+							h2 {
+								font-size: 30px;
+							}
+
+							ul {
+								margin-left:0;
+								width: 100%;
+								display: flex;
+								justify-content: space-around;
+
+								li {
+									width: 100%;
+									margin: 10px;
+									position: relative;
+
+									h2 {
+
+										font-size: 20px;
+										bottom: 0;
+									}
+
+									.price {
+
+										span {
+											font-size:16px;
+											bottom:0;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
 
 	/***
 
