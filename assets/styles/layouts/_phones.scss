@@ -410,6 +410,55 @@
 
 	/**
 
+	Checkout page
+
+	**/
+
+	.woocommerce-checkout {
+
+		div {
+
+			.content {
+
+				main {
+
+					.woocommerce {
+
+						.woocommerce-checkout {
+
+							#order_review {
+
+								.woocommerce-checkout-payment {
+
+									ul {
+
+										li {
+
+											.payment_method_stripe {
+
+												fieldset {
+
+													.form-row {
+														display:flex;
+														flex-direction: column;
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+
+	/**
+
 	Order Received page
 
 	**/

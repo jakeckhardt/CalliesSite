@@ -1136,7 +1136,7 @@ Checkout page
 									color: $grey;
 								}
 
-								.woocommerce-billing-fields__field-wrapper {
+								.woocommerce-billing-fields__field-wrapper, .shipping_address {
 										border: 1px solid rgba(0,0,0,0.1);
 										background-color: white;
 										padding: 9px 12px;
@@ -1222,6 +1222,10 @@ Checkout page
 										label {
 											font-family: $plain;
 											color: $grey;
+
+											img {
+												float: none;
+											}
 										}
 
 										.payment_method_ppec_paypal {
@@ -1238,6 +1242,44 @@ Checkout page
 											p {
 												font-family: $plain;
 												color: $grey;
+											}
+										}
+
+										.payment_method_stripe {
+
+											fieldset {
+												display:flex;
+
+												i {
+													display: none;
+												}
+
+												.form-row {
+													width: 100%;
+													margin: 0;
+													padding:2px 5px;
+												}
+
+												.form-row-wide {
+
+													.stripe-card-group {
+														width: 160px;
+													}
+												}
+
+												.form-row-first {
+
+													#stripe-exp-element {
+														width:70px;
+													}
+												}
+
+												.form-row-last {
+
+													#stripe-cvc-element {
+														width: 45px;
+													}
+												}
 											}
 										}
 									}
@@ -1323,23 +1365,39 @@ Order Received page
 
 						.woocommerce-customer-details {
 
-							h2 {
-								font-family: $fancy;
-								color: $grey;
-							}
+							.woocommerce-columns {
+								display: flex;
+								flex-direction: column;
 
-							address {
-								background: white;
-								font-family: $plain;
-								color: $grey;
-								text-align: center;
-								padding: 9px 12px;
-								border-width: 1px;
-								border-radius: 0;
-
-								p {
-									border: none;
+								.woocommerce-column {
 									padding: 0;
+									width: 100%;
+									max-width: 100%;
+									margin-bottom: 32px;
+
+									h2 {
+										font-family: $fancy;
+										color: $grey;
+									}
+
+									address {
+										background: white;
+										font-family: $plain;
+										color: $grey;
+										text-align: center;
+										padding: 9px 12px;
+										border-width: 1px;
+										border-radius: 0;
+
+										p {
+											border: none;
+											padding: 0;
+
+											&:before {
+												display: none;
+											}
+										}
+									}
 								}
 							}
 						}
